@@ -1,19 +1,31 @@
-// Mahmoud Mohamed Ismail ,Mohamed Helal
-// 20170271,20170259
-// Assignment 3
-// Appointments Calendar
 #include <iostream>
-#include "Calendar.h"
-#include "DayAppointments.h"
+
 using namespace std;
-#include "Time.h"
-#include "Appointment .h"
+int redeem(int n)
+{
+    int x;
+	if (n >= 7)
+	{
+		x = n/7;
+		return (x + redeem(x+(n % 7)));
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+
+
+using namespace std;
 int main()
 {
-
-
-
-
-
-    return 0;
+	int n;
+	cin >> n;
+	cout << (n + redeem(n));
+	return 0;
 }
+
+
+
+
